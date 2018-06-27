@@ -1,0 +1,40 @@
+.visit-register
+	.title 
+		@extend .projecttitle
+	.wrap-form
+		max-width: 60%
+		margin: 40px auto
+		+bor-rad(10px)
+		border: 1px solid $brown
+		padding: 30px
+		background: $white
+		+media-breakpoint-down(md)
+			max-width: 80%
+		+media-breakpoint-down(sm)
+			max-width: 100%
+		.form-group
+			margin-bottom: 10px
+			label
+				display: block
+				width: 100%
+			input, select 
+				background: none
+				+bor-rad(3px)
+				border: 1px solid darken($white,10%)
+				padding: 10px 15px
+				width: 100%
+	.frm-btnwrap
+		text-align: center
+		label 
+			display: none
+#ctl00_mainContent_ctl00_pnlForm
+	input[type="reset"]
+		display: none
+	input[type="submit"]
+		display: inline-block
+		width: auto
+		line-height: 36px
+		background: $green
+		padding: 0px 20px
+		color: $white
+		+bor-rad(50px)

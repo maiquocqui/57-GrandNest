@@ -1,0 +1,44 @@
+.topbar
+	text-align: center
+	margin: 15px 0
+	ul 
+		background: color-rgba($black,0.5)
+		white-space: nowrap
+		overflow: auto
+		// float: right
+		li 
+			display: inline-block
+			// float: left
+			+bor-rad(0px)
+			+media-breakpoint-down(lg)
+				display: inline-block
+				float: none
+			a 
+				display: block
+				line-height: 40px
+				padding: 0px 15px
+				text-transform: uppercase
+				color: $white
+				font-weight: 600
+				+fs(13rem)
+			&:hover
+				a
+					background: color-rgba($yellow,0.5)
+			&.active
+				background: color-rgba($black,0.3)
+				a
+					color: $yellow
+			// &:last-child
+			// 	// float: right
+			// 	+media-breakpoint-down(lg)
+			// 		float: none
+			// 	a 
+			// 		// background: $gray
+			// 		+media-breakpoint-down(lg)
+			// 			// background: none
+			// 		&:before
+			// 			content: '\f019'
+			// 			font-family: 'fontawesome'
+			// 			// margin-right: 5px
+			// 			line-height: 1
+			// 			font-weight: normal

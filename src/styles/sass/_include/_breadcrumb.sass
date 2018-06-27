@@ -1,0 +1,60 @@
+.breadcrumbwrap
+	+pos(rel,null)
+	overflow: hidden
+	.breadcrumbimg
+		+pos(abs, 0 null 0 0)
+		right: 0
+		// filter: brightness(80%)
+	.pagename
+		+pos(rel,null)
+		z-index: 5
+		+fs(40rem)
+		text-transform: uppercase
+		color: $white
+		text-align: center
+		// font-weight: 900
+		margin: 50px 0px 80px
+		text-shadow: 0 0 5px color-rgba($black,0.2)
+		+media-breakpoint-down(lg)
+			+fs(36rem)
+		+media-breakpoint-down(md)
+			+fs(32rem)
+		+media-breakpoint-down(sm)
+			+fs(28rem)
+		+media-breakpoint-down(xs)
+			+fs(24rem)
+		&:after
+			content: ''
+			display: block
+			width: 100px
+			height: 1px
+			background: $white
+			opacity: 0.8
+			margin: 15px auto 0
+	.breadcrumbcontent
+		background: color-rgba($black,0.1)
+		+pos(rel,null)
+		z-index: 5
+	.breadcrumb
+		width: 100%
+		clear: both
+		margin: 0
+		padding: 10px 0
+		+bor-rad(0)
+		background: none
+		+pos(rel,null)
+		z-index: 5
+		text-align: center
+		li 
+			display: inline-block
+			color: color-rgba($white,0.8)
+			+fs(15rem)
+			&:after
+				content: '\f105'
+				font-family: 'fontawesome'
+				margin: 0px 5px
+			&:last-child
+				&:after
+					display: none
+			a, span
+				color: $white

@@ -1,0 +1,263 @@
+.about-banner
+	.banner-img
+		+media-breakpoint-down(sm)
+			height: 300px
+			+flexbox
+			justify-content: center
+			align-items: center
+			img 
+				height: 100%
+				max-width: unset
+	.container
+		+pos(rel,null)
+		.caption
+			+pos(abs, null null 130px 15px)
+			padding: 80px 0 0 40px
+			line-height: 1.3
+			text-shadow: 0 3px 30px color-rgba($black,1)
+			+media-breakpoint-down(lg)
+				padding: 40px 0 0 50px
+				bottom: 80px
+			+media-breakpoint-down(md)
+				bottom: 50px
+				padding: 20px 0 0 20px
+			&:before
+				content: ''
+				display: block
+				width: 250px
+				height: 250px
+				background: url(../img/about/captionbg.png) center center no-repeat
+				+pos(abs, 0 null null 0)
+				+media-breakpoint-down(lg)
+					width: 150px
+					height: 150px
+					background-size: contain
+				+media-breakpoint-down(md)
+					width: 100px
+					height: 100px
+			.title
+				+fs(48rem)
+				font-weight: 600
+				color: $white
+				text-transform: uppercase
+				+pos(rel,null)
+				z-index: 5
+				text-shadow: 0 3px 30px color-rgba($black,1)
+				+media-breakpoint-down(lg)
+					+fs(36rem)
+				+media-breakpoint-down(md)
+					+fs(28rem)
+			.des 
+				+fs(36rem)
+				font-weight: 200
+				+pos(rel,null)
+				z-index: 5
+				color: $white
+				text-shadow: 0 3px 30px color-rgba($black,1)
+				+media-breakpoint-down(lg)
+					+fs(24rem)
+				+media-breakpoint-down(md)
+					+fs(16rem)
+.pagedes
+	width: 60%
+	margin: 0px auto
+	text-align: center
+	+media-breakpoint-down(sm)
+		width: 80%
+	+media-breakpoint-down(xs)
+		width: 100%
+.about-intro
+	padding: 40px 0
+	.pagetitle
+		&:after
+			display: none
+	.companylogo
+		margin-bottom: 30px
+		+media-breakpoint-down(sm)
+			margin-bottom: 10px
+			img 
+				height: 50px
+.featurelist
+	margin: 80px 0
+	+media-breakpoint-down(md)
+		margin: 40px 0
+	
+	.featurecol
+		width: 33.33%
+		text-align: center
+		background: color-rgba($green,0.7)
+		padding: 25px 30px
+		+flexbox
+		align-items: center
+		align-content: center
+		flex-wrap: wrap
+		+media-breakpoint-down(md)
+			width: 100%
+		&:nth-child(2)
+			box-shadow: 0 0 10px color-rgba($black,0.5)
+			margin: -30px 0
+			+media-breakpoint-down(md)
+				margin: 10px 0
+		.title
+			+fs(20rem)
+			text-transform: uppercase
+			font-weight: 700
+			margin-bottom: 10px
+			color: $brown
+			width: 100%
+		.des
+			+fs(15rem)
+			opacity: 0.65
+			margin-bottom: 10px
+			color: $white
+			width: 100%
+		.link
+			+fs(14rem)
+			color: $brown
+			display: block
+			width: 100%
+			&:hover
+				text-decoration: underline
+
+.about-overview
+	padding: 40px 0 0
+	
+	.pagedes
+		margin-bottom: 80px
+		+media-breakpoint-down(sm)
+			margin-bottom: 30px
+	.about-info
+		margin: 40px 0
+		box-shadow: 0 0 20px color-rgba($black,0.2)
+		+pos(rel,null)
+	.info-img
+		+pos(abs, 0 null 0 0)
+		right: 0
+	.info
+		color: $white
+		background: color-rgba($brown,1)
+		padding: 15px 30px
+		// box-shadow: 0 0 20px color-rgba($black,0.2)
+		width: 66.66%
+		float: right
+		margin-top: 0px
+		margin-bottom: 0px
+		+media-breakpoint-down(lg)
+			width: 80%
+		+media-breakpoint-down(md)
+			width: 100%
+			margin: 0
+		ul 
+			li 
+				&:before
+					background: $white
+		.title
+			+fs(18rem)
+			font-weight: 700
+.about-reason
+	box-shadow: 0 0 20px color-rgba($black,0.2)
+	margin-bottom: 40px
+	.reason-img
+		width: 33.33%
+		+media-breakpoint-down(md)
+			width: 100%
+			height: 500px
+		+media-breakpoint-down(sm)
+			height: 250px
+	.reasonlist
+		width: 66.66%
+		background: $brown
+		color: $white
+		padding: 30px
+		justify-content: center
+		+media-breakpoint-down(md)
+			width: 100%
+		+media-breakpoint-down(sm)
+			padding: 15px
+		.title
+			width: 100%
+			+fs(18rem)
+			font-weight: 700
+			+media-breakpoint-down(xs)
+				+fs(16rem)
+		.reasoncol
+			text-align: center
+			width: 20%
+			padding: 30px 0
+			+media-breakpoint-down(lg)
+				padding: 15px 0
+			+media-breakpoint-down(sm)
+				width: 25%
+			+media-breakpoint-down(xs)
+				width: 33.33%
+			.icon
+				width: 64px
+				height: 64px
+				margin: 0px auto 20px
+				+flexbox
+				justify-content: center
+				align-items: center
+				img 
+					max-width: 100%
+					max-height: 100%
+			figcaption
+				padding: 0px 25px
+				+fs(13rem)
+				line-height: 1.3
+				+media-breakpoint-down(lg)
+					padding: 0px 10px
+				+media-breakpoint-down(sm)
+					padding: 0
+
+.about-partner
+	background: $white
+	box-shadow: 0 0 20px color-rgba($black,0.2)
+	margin-bottom: 40px
+	padding: 30px
+	padding-bottom: 10px
+	.partnercol
+		width: 20%
+		padding: 0px 10px
+		margin-bottom: 20px
+		+media-breakpoint-down(md)
+			width: 50%
+		+media-breakpoint-down(xs)
+			width: 100%
+		.partner
+			height: 110px
+			border: 1px solid darken($white,10%)
+			+flexbox
+			justify-content: center
+			align-items: center
+			+pos(rel,null)
+			figure
+				max-width: 80% 
+				max-height: 80%
+				img
+			.title
+				+fs(16rem)
+				font-weight: 700
+				background: $white
+				padding: 0px 10px
+				+pos(abs, -15px null null 50%)
+				white-space: nowrap
+				+transform(translateX(-50%))
+		&.big
+			width: 60%
+			+media-breakpoint-down(md)
+				width: 100%
+			.partner
+				+media-breakpoint-down(xs)
+					flex-wrap: wrap
+					height: auto
+				.img
+					width: 33.33%
+					+flexbox
+					justify-content: center
+					+media-breakpoint-down(xs)
+						width: 100%
+						// height: 100px
+						padding: 30px 0
+						img 
+							height: auto
+							width: auto

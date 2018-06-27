@@ -1,0 +1,420 @@
+.news-page
+	background: color-rgba($white,0.8)
+	padding: 0 20px
+	// margin-top: 30px
+	// margin-bottom: 140px
+	// .newslist
+	// 	margin-bottom: 40px
+	.news-detail
+	.newsname-title
+		+fs(30rem)
+		font-weight: 700
+		color: $black
+		margin: 20px 0
+	.news-info
+		padding-bottom: 10px
+		border-bottom: 1px solid darken($white,10%)
+		margin-bottom: 20px
+		time
+			display: inline-block
+			line-height: 22px
+			background: darken($white,10%)
+			// color: $main
+			+bor-rad(3px)
+			+fs( 13rem)
+			padding: 0px 5px
+			margin-right: 10px
+		.share
+			display: inline-block
+.newslist
+	margin-top: 10px
+	// padding: 0px 10px
+	.row
+		margin: 0px -10px
+	.col-xs-12
+		padding: 0px 10px
+		margin-bottom: 40px
+	.newscol
+		// background: $white
+		height: 100%
+		figure 
+			.newsimg
+				display: block
+				+pos(rel,null)
+				overflow: hidden
+				img 
+					width: 100%
+					+transition(all,0.5s)
+			figcaption
+				padding: 20px 0 0
+				+pos(rel,null)
+				padding-left: 80px
+				+media-breakpoint-down(lg)
+					padding-left: 70px
+				time
+					display: block
+					text-transform: uppercase
+					background: $brown
+					color: $white
+					margin-bottom: 5px
+					text-align: center
+					line-height: 1.3
+					padding: 5px
+					+pos(abs, 20px null null 0)
+					+media-breakpoint-down(lg)
+					
+					.date
+						+fs(30rem)
+						font-weight: 900
+						+media-breakpoint-down(lg)
+							+fs(24rem)
+					.month
+						+fs(12rem)
+						+media-breakpoint-down(lg)
+							+fs(10rem)
+				.newsname
+					+fs(16rem)
+					text-transform: uppercase
+					font-weight: 700
+					margin-bottom: 5px
+					line-height: 1.3
+					+media-breakpoint-down(lg)
+						+fs(14rem)
+					a 
+						// color: $orange
+						color: $green
+				.newsdes
+					+fs(14rem)
+					color: darken($white,60%)
+					max-height: 125px
+					overflow: hidden
+					// margin-bottom: 10px
+					+media-breakpoint-down(lg)
+						+fs(13rem)
+			&:hover
+				&:after
+					right: 0
+				.newsimg
+					&:before
+						+transform(scale3d(1,1,1))
+						opacity: 1
+						visibility: visible
+				figcaption
+					.newsname
+						a 
+							color: $green
+		&.big
+			figure 
+				figcaption
+					.newsname
+						+fs(20rem)
+						// line-height: 1.3
+					.newsdes
+						// +fs(16rem)
+		&.picture
+			figure 
+				.newsimg
+					&:before
+						content: '\f1c5'
+				figcaption
+					.newsname
+						font-weight: 500
+						a 
+							&:before
+								content: '\f1c5'
+								font-family: 'fontawesome'
+								font-weight: normal
+								margin-right: 5px
+								color: darken($white,40%)
+		&.video
+			figure 
+				.newsimg
+					&:before
+						content: '\f04b'
+				figcaption
+					.newsname
+						font-weight: 500
+						a 
+							&:before
+								content: '\f03d'
+								font-family: 'fontawesome'
+								font-weight: normal
+								margin-right: 5px
+								color: darken($white,40%)
+	&.newslist2
+		.newscol
+			border-bottom: 1px solid darken($white,10%)
+			figure 
+				figcaption
+					padding: 5px 0
+			&.big
+				border-bottom: none
+		.btn-viewmore
+			color: darken($white,60%)
+			text-transform: uppercase
+			font-style: italic
+			+fs(13rem)
+			display: inline-block
+			&:after
+				content: '\f105'
+				font-family: 'fontawesome'
+				margin-left: 5px
+			&:hover
+				color: $red
+				letter-spacing: 2px
+
+.project-promotion
+	padding: 0px 10px
+	margin-top: 10px
+	.row
+		margin: 0px -10px
+	.col-xs-12
+		padding: 0px 10px
+		margin-bottom: 20px
+	.promotioncol
+		figure 
+			+pos(rel,null)
+			.promotionimg
+				display: block
+				img 
+					width: 100%
+			figcaption
+				+pos(abs, null 0 0 0)
+				background: color-rgba($black,0.5)
+				padding: 10px 15px
+				+media-breakpoint-down(md)
+					padding: 10px
+				.promotionname
+					+fs(15rem)
+					line-height: 1.5
+					+media-breakpoint-down(md)
+						+fs(14rem)
+						opacity: 0.8
+					a
+						color: $white
+				.promotiondes
+					+media-breakpoint-down(md)
+						display: none
+		&.big
+			figure
+				figcaption
+					.promotionname
+						+fs(16rem)
+						font-weight: 700
+						text-transform: uppercase
+						+media-breakpoint-down(md)
+							opacity: 1
+						a 
+							color: $brown
+							+media-breakpoint-down(md)
+								color: $white
+					.promotiondes
+						+fs(14rem)
+						color: $white
+
+.table-codong
+	border: 1px solid darken($white,10%)
+	thead
+		th 
+			border-bottom: 2px solid $orange
+			border-top: none
+	th, td 
+		padding: 10px
+		text-align: center
+		&:first-child
+			text-align: left
+	td 
+		border: none
+		border-bottom: 1px dashed darken($white,10%)
+		+transition(all,0.5s)
+		a 
+			color: $red
+	tr 
+		&:nth-child(even)
+			td 
+				background: lighten($orange,63%)
+		&:hover
+			td 
+				background: $orange
+				color: $white
+				a 
+					color: $white
+
+.sidebartitle
+	+fs(16rem)
+	color: $brown
+	text-transform: uppercase
+	line-height: 1.5
+	margin-bottom: 10px
+	border-bottom: 1px solid darken($white,10%)
+	font-weight: 700
+	padding: 5px 0
+.news-video
+	margin-bottom: 30px
+	.video
+		border-bottom: 1px solid darken($white,10%)
+		figure 
+			.videoimg
+				display: block
+				+pos(rel,null)
+				&:before
+					content: '\f04b'
+					font-family: 'fontawesome'
+					+pos(abs, 0 null 0 0)
+					right: 0
+					background: color-rgba($black,0.2)
+					+flexbox
+					justify-content: center
+					align-items: center
+					+fs(32rem)
+					color: $white
+				img 
+					width: 100%
+			figcaption
+				padding: 10px 0
+				.videoname
+					font-weight: 500
+					padding-left: 20px
+					+pos(rel,null)
+					+fs(14rem)
+					&:before
+						content: '\f03d'
+						font-family: 'fontawesome'
+						margin-right: 5px
+						+pos(abs, 0 null null 0)
+						font-weight: normal
+						+fs(12rem)
+						color: darken($white,40%)
+					a
+						color: $main
+						&:hover
+							color: $orange
+	.btn-viewmore
+		color: darken($white,60%)
+		text-transform: uppercase
+		font-style: italic
+		+fs(13rem)
+		display: inline-block
+		margin-top: 10px
+		&:after
+			content: '\f105'
+			font-family: 'fontawesome'
+			margin-left: 5px
+		&:hover
+			color: $red
+			letter-spacing: 2px
+.news-album
+	.albumlist
+		+flexbox
+		flex-wrap: wrap
+		margin: 0px -2px
+		.pic
+			width: 33.33%
+			padding: 0px 2px
+			margin-bottom: 4px
+			.img 
+				display: block
+				overflow: hidden
+				img 
+					+transition(all,0.5s)
+				&:hover
+					img 
+						+transform(scale3d(1.2,1.2,1))
+	.btn-viewmore
+		color: darken($white,60%)
+		text-transform: uppercase
+		font-style: italic
+		+fs(13rem)
+		display: inline-block
+		margin-top: 10px
+		&:after
+			content: '\f105'
+			font-family: 'fontawesome'
+			margin-left: 5px
+		&:hover
+			color: $red
+			letter-spacing: 2px
+// .projecttitle
+// 	font-weight: 700
+// 	text-transform: uppercase
+// 	color: $black
+// 	margin-bottom: 10px
+.news-sidebar
+	margin-bottom: 30px
+	+media-breakpoint-down(md)
+		margin-top: 0
+	ul 
+		li 
+			margin-bottom: 1px
+			a 
+				display: block
+				padding: 10px 15px
+				color: $main
+				font-weight: 500
+				background: darken($white,10%)
+				// border-bottom: 1px solid darken($white,10%)
+				&:before
+					// content: '\f105'
+					// font-family: 'fontawesome'
+					// margin-right: 5px
+					// font-weight: normal
+			&:hover
+				a 
+					color: $green
+			&.active
+				a 
+					background: $green
+					color: $yellow
+					border: none
+
+.newsdetail
+	margin-bottom: 20px
+	.newsinfo
+		margin-top: -20px
+		padding: 10px 0
+		// border-bottom: 1px solid darken($white,10%)
+		time, .share
+			display: inline-block
+		time 
+			margin-right: 15px
+			+fs(12rem)
+			background: darken($white,10%)
+			color: $main
+			font-weight: 500
+			padding: 2px 8px
+			+bor-rad(3px)
+.other-news
+	padding: 20px 15px
+	background: darken($white,4%)
+	.newslist
+		.newscol
+			padding: 0 0 10px
+			border-bottom: 1px solid darken($white,10%)
+
+.pages
+	text-align: center
+	margin-bottom: 40px
+	ul.pagination
+		margin: 0
+		padding: 0
+		li 
+			display: inline-block
+			+ li 
+				margin-left: 5px
+			a,span
+				display: block
+				width: 30px
+				height: 30px
+				line-height: 30px
+				+bor-rad(50%)
+				text-align: center
+				color: $white
+				+fs(14rem)
+				// font-weight: 700
+				background: $green
+			&:hover
+				a,span 
+					background: $brown
+			&.active
+				a,span 
+					background: $brown

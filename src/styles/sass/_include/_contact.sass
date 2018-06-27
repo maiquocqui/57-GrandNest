@@ -1,0 +1,98 @@
+#map
+	margin-bottom: 20px
+	iframe 
+		pointer-events: none
+		+media-breakpoint-down(md)
+			height: 300px
+		+media-breakpoint-down(sm)
+			height: 250px
+		&.active
+			pointer-events: all
+.contact-page
+	padding: 5px
+	.contactinfo
+		background: darken($white,5%)
+		padding: 15px
+		margin-bottom: 20px
+		.title
+			+fs(16rem)
+			font-weight: 700
+			color: $brown
+			text-transform: uppercase
+			border-bottom: 1px solid darken($white,10%)
+			margin-bottom: 15px
+		.logo
+			margin-bottom: 10px
+		ul 
+			li 
+				+fs(14rem)
+				a 
+					color: $brown
+.contact-form
+	.module-title
+		margin-bottom: 15px
+		+fs(16rem)
+		line-height: 1.5
+	.form-wrap
+		margin: 0px -10px
+	.form-group
+		padding: 0px 10px
+		margin-bottom: 10px
+		// float: left
+		// width: 100%
+		&.col2
+			width: 50%
+			float: left
+			+media-breakpoint-down(md)
+				width: 100%
+		label
+			// display: none
+			margin-bottom: 5px
+		label.fileinput
+			display: block
+			margin-bottom: 10px
+			// text-transform: uppercase
+			+fs(14rem)
+			color: $black
+			font-style: italic
+			span 
+				text-transform: none
+		input, textarea, select
+			width: 100%
+			border: none
+			background: darken($white,3%)
+			padding: 10px 15px
+			+bor-rad(3px)
+		select
+			padding: 9px 10px
+			color: darken($white,40%)
+			option
+		input[type="file"]
+			padding: 5px
+			margin-bottom: 15px
+			width: 50%
+			+media-breakpoint-down(md)
+				width: 100%
+		.des
+			+fs(14rem)
+			color: darken($white,60%)
+			font-style: italic
+	.captcha
+		padding: 0 10px
+		margin-bottom: 15px
+		clear: both
+		width: 100%
+	.btnwrap
+		clear: both
+		padding: 0px 15px
+	input[type='reset']
+	input[type='submit']
+		background: $brown
+		line-height: 40px
+		+bor-rad(0px)
+		color: $white
+		text-transform: uppercase
+		padding: 0 30px
+		border: none
+		&:hover
+			background: $green

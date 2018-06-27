@@ -1,0 +1,81 @@
+.support-page
+	margin: 40px 0
+.faqlist
+	.faq
+		// +bor-rad(5px)
+		border: 1px solid darken($white,10%)
+		margin-bottom: 15px
+		+bor-rad(5px)
+		overflow: hidden
+		.faqtitle
+			font-weight: 500
+			color: $main
+			padding: 15px 15px 15px 40px
+			+pos(rel,null)
+			cursor: pointer
+			&:hover
+				color: $blue
+			&:before 
+				content: '\f059'
+				font-family: 'fontawesome'
+				margin-right: 10px
+				color: $red
+				+pos(abs, 15px null null 15px)
+			&:after
+				content: '\f105'
+				font-family: 'fontawesome'
+				+pos(abs, 12px 15px null null)
+				+fs(18rem)
+				display: block
+				+transform(rotateZ(90deg))
+			&.active
+				color: $blue
+				font-weight: 700
+				&:after
+					font-weight: normal
+					+transform(rotateZ(90deg)scale(-1,1))
+		.faqcontent
+			display: none
+			border-top: 1px solid darken($white,10%)
+			padding: 15px 15px 0 40px
+
+.send-nessage
+	margin: 40px 0
+	+bor-rad(5px)
+	border: 1px solid darken($white,10%)
+	background: darken($white,3%)
+	padding: 15px
+	+media-breakpoint-down(md)
+		margin-top: 0
+	.module-title
+		color: black
+		font-weight: 600
+		+fs(16rem)
+		color: $blue
+		margin-bottom: 15px
+		&:before
+			content: '\f044'
+			font-family: 'fontawesome'
+			font-weight: normal
+			margin-right: 5px
+	.form-group
+		margin-bottom: 10px
+		+flexbox
+		flex-wrap: wrap
+		label
+			+fs(14rem)
+		input, textarea
+			width: 100%
+			+bor-rad(3px)
+			border: 1px solid darken(white,15%)
+			padding: 10px 15px
+			&:hover
+				border-color: darken($white,30%)
+			&:focus
+				border-color: $blue
+	input[type="reset"]
+		display: none
+	input[type="submit"]
+		+mainbutton
+		border: none
+		margin-top: 10px

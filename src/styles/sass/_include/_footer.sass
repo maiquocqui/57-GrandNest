@@ -1,0 +1,68 @@
+footer
+	background: url(../img/footerbg.jpg) center top no-repeat
+	background-size: cover
+	text-align: center
+	.footernav
+		margin-bottom: 10px
+		ul 
+			li 
+				display: inline-block
+				+ li 
+					margin-left: 30px
+				a 
+					color: $white
+					text-transform: uppercase
+					+fs(13rem)
+	.footerbottom
+		.copyright, .policy
+			display: inline-block
+			+fs(13rem)
+			color: $white
+			margin-bottom: 20px
+			ul 
+				li 
+					display: inline-block
+					margin-left: 20px
+					a 
+						color: $white
+	.social
+		margin-bottom: 50px
+		a 
+			display: inline-block
+			+fs(25rem)
+			color: $white
+			+ a 
+				margin-left: 20px
+	
+	.subscribeWrap
+		+flexbox
+		align-items: center
+		justify-content: center
+		padding: 30px 0
+		border-bottom: 1px solid color-rgba($white,0.1)
+		margin-bottom: 30px
+		.alert
+			margin: 0
+			+bor-rad(0)
+		.ModuleContent
+			+flexbox
+			flex-wrap: wrap
+			justify-content: center
+		.module-title
+			color: $white
+			margin-right: 20px
+			margin-bottom: 0
+			+flexbox
+			align-items: center
+			align-content: center
+		.subscribe
+			border: 1px solid $white
+			margin-bottom: 0
+			width: 300px
+			input
+				color: $white
+			.subscribebutton
+				color: $white
+		.subscribefrm
+			margin-bottom: 0
+			border: none

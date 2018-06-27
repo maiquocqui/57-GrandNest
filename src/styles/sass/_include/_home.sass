@@ -1,0 +1,160 @@
+.headtitle
+	+fs(28rem)
+	font-weight: 600
+	line-height: 1.3
+	margin-bottom: 15px
+	text-transform: uppercase
+	color: $white
+	// font-family: 'Quicksand'
+	+media-breakpoint-down(lg)
+		+fs(18rem)
+		margin-bottom: 10px
+.pagetitle 
+	+fs(24rem)
+	text-transform: uppercase
+	color: $green
+	text-align: center
+	margin-bottom: 20px
+	&:after
+		content: ''
+		display: block
+		width: 100px
+		height: 1px
+		background: $brown
+		margin: 15px auto 0
+.homebox
+	+pos(rel,null)
+	overflow: hidden
+	figure
+		+pos(rel,null)
+		z-index: 15
+		.boximg
+			&:before
+				content: ''
+				display: block
+				+pos(abs, 0 null 0 0)
+				right: 0
+				border: 10px solid $white
+				z-index: 10
+				+transition(all,0.5s)
+				+transform(scale3d(1.2,1.2,1.2))
+				opacity: 0
+		figcaption
+			z-index: 20
+	&:hover
+		figure
+			.boximg
+				&:before
+					+transform(scale3d(1,1,1))
+					opacity: 1
+.home-about
+	figure
+		+pos(rel,null)
+		z-index: 15
+		.boximg
+			display: block
+			img
+				width: 100%
+		figcaption
+			+pos(abs, 0 null 0 0)
+			right: 0
+			padding: 25px
+			+media-breakpoint-down(lg)
+				padding: 15px
+			.des
+				+fs(18rem)
+				font-weight: 300
+				color: $white
+				+media-breakpoint-down(lg)
+					+fs(16rem)
+			.link
+				+fs(36rem)
+				color: $white
+				+pos(abs, null 30px 30px null)
+				+media-breakpoint-down(lg)
+					right: 15px
+					bottom: 15px
+					+fs(24rem)
+				&:hover
+					color: $green
+					padding-left: 10px
+			&.black
+				.headtitle
+					color: $main
+				.des
+					color: $main
+				.link 
+					color: $main
+					&:hover
+						color: $green
+						padding-left: 10px
+.subscribe
+	+pos(rel,null)
+	z-index: 15
+	.module-title
+		+fs(18rem)
+		font-weight: 300
+		color: $main
+		margin-bottom: 15px
+		+media-breakpoint-down(lg)
+			+fs(14rem)
+			margin-bottom: 10px
+	.subscribefrm
+		border: 2px solid darken($white,40%)
+		+flexbox
+		margin-bottom: 15px
+		+pos(rel,null)
+		z-index: 15
+		+media-breakpoint-down(lg)
+			margin-bottom: 10px
+		input 
+			line-height: 46px
+			padding: 0px 15px
+			background: none
+			width: calc(100% - 40px)
+			border: none
+			+media-breakpoint-down(lg)
+				line-height: 36px
+		.subscribebutton
+			+fs(0)
+			line-height: 46px
+			width: 60px
+			height: 46px
+			color: darken($white,60%)
+			+media-breakpoint-down(lg)
+				line-height: 36px
+			&:before
+				content: '\e87a'
+				font-family: 'linearicons-free'
+				+fs(36rem)
+			&:hover
+				color: $green
+				padding-left: 10px
+	.hotline
+		.module-title
+			+fs(18rem)
+			margin-bottom: 5px
+			+media-breakpoint-down(lg)
+				+fs(14rem)
+				margin-bottom: 0
+		a 
+			+fs(36rem)
+			// font-family: 'Quicksand'
+			color: $green
+			font-weight: 700
+			+media-breakpoint-down(lg)
+				+fs(18rem)
+
+.fancybox-slide
+	> *
+		padding: 0px
+.fancybox-close-small
+	// top: -20px
+	// right: -20px
+	&:after
+		background: $green
+		color: $white
+	&:hover
+		&:after
+			background: lighten($green,10%)
+			color: $white

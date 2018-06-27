@@ -1,0 +1,571 @@
+.project-title
+	text-align: center
+	margin-bottom: 30px
+	span
+		+fs(24rem)
+		font-weight: 900
+		color: $white
+		background: $brown
+		display: inline-block
+		text-transform: uppercase
+		padding: 10px 25px
+		text-shadow: 0 0 5px color-rgba($black,0.2)
+
+.top-nav
+	padding-bottom: 10px
+	border-bottom: 1px solid darken($white,10%)
+	white-space: nowrap
+	overflow: auto
+	&.info-nav
+		padding-bottom: 10px
+		border-bottom: 1px solid darken($white,10%)
+		ul 
+			+flexbox
+			+media-breakpoint-down(sm)
+				display: block
+			li 
+				width: 20%
+				min-width: unset
+				+media-breakpoint-down(sm)
+					display: inline-block
+					width: unset
+				+ li 
+					margin-left: 10px
+				a 
+					+media-breakpoint-down(sm)
+						padding: 0px 25px
+	ul 
+		text-align: center
+		li 
+			display: inline-block
+			vertical-align: middle
+			min-width: 230px
+			+ li 
+				margin-left: 7px
+			a 
+				display: block
+				background: $brown
+				color: $white
+				white-space: nowrap
+				padding: 0px 0
+				line-height: 50px
+				+flexbox
+				align-items: center
+				+pos(rel,null)
+				text-align: center
+				justify-content: center
+				+media-breakpoint-down(md)
+					line-height: 40px
+				.icon, .text
+					display: inline-block
+					vertical-align: middle
+				.icon
+					height: 40px
+					width: 40px
+					+flexbox
+					justify-content: center
+					align-items: center
+					margin-right: 10px
+					+media-breakpoint-down(md)
+						display: none
+					img 
+						max-width: 100% 
+						max-height: 100%
+			&:hover
+				a 
+					background: $green
+			&.active
+				a 
+					background: $green
+					&:before
+						content: ''
+						display: block
+						+pos(abs, 100% null null 50%)
+						+transform(translateX(-50%))
+						width: 0
+						height: 0
+						border: 5px solid
+						border-color: $green transparent transparent transparent
+
+.topnav
+	padding: 30px 0
+	white-space: nowrap
+	overflow: auto
+	ul 
+		text-align: center
+		li 
+			display: inline-block
+			line-height: 30px
+			+bor-rad(50px)
+			border: 1px solid $green
+			padding: 0px 25px
+			color: $green
+			+ li 
+				margin-left: 5px
+			a 
+				color: $green
+			&:hover
+				background: lighten($green,80%)
+			&.active
+				background: $green
+				a 
+					color: $white
+
+.project-page
+	padding: 10px
+	background: $white
+	margin-top: -40px
+	margin-bottom: 60px
+	+pos(rel,null)
+	z-index: 10
+	box-shadow: 0 0 20px color-rgba($black,0.1)
+	.location-img
+		img
+			width: 100%
+	.location-info
+		margin-top: -20px
+		.col-xs-12
+			+ .col-xs-12
+				border-left: 1px solid darken($white,10%)
+		.content
+			padding: 0px 20px
+		.nearby
+			padding: 0px 20px
+			.nearby-group
+				+flexbox
+				flex-wrap: wrap
+				border-bottom: 1px solid darken($white,10%)
+				margin-bottom: 10px
+				&:last-child
+					border: none
+				.duration
+					width: 110px
+					+fs(24rem)
+					color: $brown
+					line-height: 1
+					+media-breakpoint-down(xs)
+						width: 100%
+				.place
+					width: calc(100% - 110px)
+					+media-breakpoint-down(xs)
+						width: 100%
+						padding: 0
+.projecttitle
+	+fs(24rem)
+	text-align: center
+	font-weight: 700
+	color: $green
+	margin-bottom: 30px
+	text-transform: uppercase
+	+media-breakpoint-down(md)
+		+fs(18rem)
+.project-utilities
+	.utilities-map
+		padding: 30px
+		text-align: center
+		img 
+			// width: 100%
+
+
+.project-utilities
+	.intro
+		+fs(24rem)
+		font-weight: 300
+		max-width: 80%
+		margin: 30px auto
+		+media-breakpoint-down(lg)
+			+fs(18rem)
+		+media-breakpoint-down(md)
+			+fs(16rem)
+		+media-breakpoint-down(sm)
+			+fs(14rem)
+			width: 100%
+	.utiliti-place
+		margin-bottom: 5px
+		.row
+			margin: 0px -5px
+		.col-xs-12
+			padding: 0px 5px
+			+media-breakpoint-down(md)
+				margin-bottom: 10px
+		.placecol
+			height: 100%
+			background: lighten($brown,40%)
+			.title
+				+fs(18rem)
+				font-weight: 700
+				color: $white
+				padding: 5px 15px
+				background: $brown
+				border-bottom: 2px solid $white
+				+media-breakpoint-down(lg)
+					+fs(16rem)
+			.placelist
+				padding: 15px
+			.place 
+				+flexbox
+				flex-wrap: wrap
+				padding: 2px 0
+				.name
+					width: calc(100% - 60px)
+					+fs(14rem)
+				.distance
+					width: 60px
+					color: $brown
+					+fs(13rem)
+					text-align: right
+.project-gallery
+	margin: 0px -5px
+	.col
+		float: left
+		width: 40%
+		+media-breakpoint-down(sm)
+			width: 100%
+		&.col1
+			width: 20%
+			+media-breakpoint-down(sm)
+				width: 100%
+			.album
+				width: 100%
+	.album
+		padding: 5px
+		width: 50%
+		float: left
+		&:nth-child(6)
+			clear: left
+		&:last-child
+			float: right
+		figure
+			+pos(rel,null)
+			.pic 
+				display: block
+				height: 220px
+				+media-breakpoint-down(lg)
+					height: 180px
+				+media-breakpoint-down(md)
+					height: 130px
+				+media-breakpoint-down(sm)
+					height: 160px
+			figcaption
+				.fa 
+					display: block
+					width: 100%
+					text-align: center
+					+fs(24rem)
+				a 
+					color: $white
+					+pos(abs, 0 null 0 0)
+					right: 0
+					z-index: 5
+					background: color-rgba($brown,0.7)
+					+flexbox
+					flex-wrap: wrap
+					justify-content: center
+					align-items: center
+					align-content: center
+					+fs(18rem)
+					color: $white
+					+transition(all,0.5s)
+					opacity: 0
+			&:hover
+				figcaption
+					a
+						opacity: 1
+		&.big
+			width: 100%
+			.pic 
+				height: 450px
+				+media-breakpoint-down(lg)
+					height: 370px
+				+media-breakpoint-down(md)
+					height: 270px
+				+media-breakpoint-down(sm)
+					height: 320px
+
+.project-building
+	margin-top: 10px
+	overflow: auto
+	+media-breakpoint-down(lg)
+		height: 500px
+	+media-breakpoint-down(md)
+		height: 400px
+	+media-breakpoint-down(sm)
+		height: 350px
+	+media-breakpoint-down(xs)
+		height: 300px
+	.building-img
+		width: 1260px
+		height: 720px
+		max-width: unset
+		max-height: unset
+		+pos(rel,null)
+		img
+		.building
+			&.building1
+				+pos(abs, null null 252px 348px)
+				z-index: 5
+				.label
+					right: unset
+					left: 0
+					+transform(translateX(-100%)translateY(-50%))
+					&:before
+						+transform(translateY(-50%)rotateZ(135deg))
+						+pos(abs, 50% -6px null unset)
+			&.building2
+				+pos(abs, null null 356px 461px)
+				.label
+					top: 0
+					right: unset
+					left: 50%
+					+transform(translateX(-50%)translateY(-100%))
+					&:before
+						+transform(translateY(0%)rotateZ(-135deg))
+						+pos(abs, unset unset -7px 50%)
+			&.building3
+				+pos(abs, 106px null unset 698px)
+				z-index: 3
+				.label
+					top: 0
+					right: unset
+					left: 50%
+					+transform(translateX(-50%)translateY(-100%))
+					&:before
+						+transform(translateY(0%)rotateZ(-135deg))
+						+pos(abs, unset unset -7px 50%)
+			&.building4
+				+pos(abs, null 450px 230px null)
+				z-index: 5
+				.label
+					top: 100%
+					right: unset
+					left: 50%
+					+transform(translateX(-50%)translateY(0%))
+					&:before
+						+transform(translateY(0%)translateX(-50%)rotateZ(45deg))
+						+pos(abs, -7px unset unset 50%)
+			&.building5
+				+pos(abs, 312px 217px unset unset)
+				.label 
+					left: 100%
+					right: unset
+					+transform(translateY(-50%)translateX(0%))
+			.img 
+				+transition(all,0.5s)
+				opacity: 0
+				visibility: hidden
+				img
+			.label
+				+fs(14rem)
+				line-height: 30px
+				border: 2px solid $white
+				background: $brown
+				color: $white
+				white-space: nowrap
+				+bor-rad(5px)
+				+pos(abs,50% -30px null null)
+				+transform(translateY(-50%)translateX(100%))
+				padding: 0px 20px
+				+transition(all,0.5s)
+				a 
+					color: $white
+				&:before
+					content: ''
+					display: block
+					width: 0
+					width: 10px
+					height: 10px
+					background: $brown
+					z-index: 1
+					border-left: 2px solid $white
+					border-top: 2px solid $white
+					+transform(translateY(-50%)rotateZ(-45deg))
+					+pos(abs, 50% null null -7px)
+					+transition(all,0.5s)
+			&:hover
+				.img
+					opacity: 0.35
+					visibility: visible
+				.label
+					background: $green
+					color: $white
+					&:before
+						background: $green
+
+.project-land
+	padding: 0px 50px
+	margin-bottom: 20px
+	+media-breakpoint-down(md)
+		padding: 0
+	.apartment
+		padding: 0px 50px
+		+media-breakpoint-down(md)
+			padding: 0
+	.btn-download
+		display: block
+		float: right
+		margin-top: -50px
+		background: $lbrown
+		color: $white
+		+pos(rel,null)
+		+fs(14rem)
+		max-width: 230px
+		padding: 5px 30px
+		padding-left: 60px
+		&:before
+			content: '\f019'
+			font-family: 'fontawesome'
+			+pos(abs, 7px null null 20px)
+			+fs(24rem)
+	.mini-apartment
+		margin-bottom: 30px
+	.apartment-detail
+		margin-bottom: 30px
+		.title
+			background: $lbrown
+			color: $white
+			padding-left: 50px
+			display: block
+			+pos(rel,null)
+			.number
+				width: 50px
+				line-height: 50px
+				+fs(18rem)
+				font-weight: 900
+				+pos(abs, 0 null null 0)
+				text-transform: uppercase
+				text-align: center
+			.caption
+				line-height: 1.5
+				padding: 3px 0
+				.name
+					+fs(16rem)
+					font-weight: 700
+				.des
+					+fs(14rem)
+		.detail
+			border: 1px solid $lbrown
+			border-top: none
+			padding: 20px
+.apartment-list
+	.item
+		// background: $lbrown
+		border-bottom: 1px solid $lbrown
+		color: $main
+		padding-left: 50px
+		margin-bottom: 10px
+		display: block
+		+pos(rel,null)
+		.number
+			width: 50px
+			line-height: 50px
+			+fs(18rem)
+			font-weight: 900
+			+pos(abs, 0 null null 0)
+			text-transform: uppercase
+			text-align: center
+			color: $white
+			background: $lbrown
+		.caption
+			line-height: 1.5
+			padding: 2px 0
+			padding-left: 10px
+			.name
+				+fs(16rem)
+				font-weight: 700
+			.des
+				+fs(14rem)
+		&:hover
+			background: $lbrown
+			color: $white
+		&:nth-child(2)
+			border-color: #dfb03e
+			.number
+				background: #dfb03e
+			&:hover
+				background: #dfb03e
+		&:nth-child(3)
+			border-color: #f5e4c6
+			.number
+				background: #f5e4c6
+			&:hover
+				background: #f5e4c6
+		&:nth-child(4)
+			border-color: #448b6b
+			.number
+				background: #448b6b
+			&:hover
+				background: #448b6b
+		&:nth-child(5)
+			border-color: #95cab8
+			.number
+				background: #95cab8
+			&:hover
+				background: #95cab8
+.video-list
+	margin-top: 10px
+	margin-bottom: -10px
+	.row
+		margin: 0px -5px
+	.col-xs-12
+		padding: 0px 5px
+	.video
+		margin-bottom: 10px
+		figure 
+			+pos(rel,null)
+			.videoimg
+				display: block
+				height: 250px
+				+media-breakpoint-down(lg)
+					height: 220px
+				+media-breakpoint-down(md)
+					height: 200px
+				+media-breakpoint-down(xs)
+					height: 260px
+			figcaption
+				.videoname
+					display: block
+					+pos(abs, 0 null 0 0)
+					right: 0
+					background: color-rgba($black,0.5)
+					+flexbox
+					flex-wrap: wrap
+					justify-content: center
+					align-items: center
+					align-content: center
+					text-align: center
+					z-index: 5
+					color: $white
+					text-transform: uppercase
+					font-weight: 600
+					&:before
+						content: '\f04b'
+						font-family: 'fontawesome'
+						+fs(30rem)
+						clear: both
+						display: block
+						width: 100%
+						text-align: center
+		&.big
+			figure 
+				.videoimg
+					height: 510px
+					+media-breakpoint-down(lg)
+						height: 450px
+					+media-breakpoint-down(md)
+						height: 350px
+					+media-breakpoint-down(xs)
+						height: 300px
+				figcaption
+					.videoname
+						+pos(abs, unset 0 0 0)
+						padding: 15px 30px
+						justify-content: flex-start
+						&:before
+							width: unset
+							margin-right: 10px
+
+.view360
+	margin-top: 10px
+	img 
+		width: 100%
+

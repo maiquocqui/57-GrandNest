@@ -1,0 +1,350 @@
+.product-page
+	padding: 10px
+	background: $white
+	margin-top: -40px
+	margin-bottom: 60px
+	+pos(rel,null)
+	z-index: 10
+	box-shadow: 0 0 20px color-rgba($black,0.1)
+.product-filter
+	padding: 10px 10px 10px
+	border-bottom: 1px solid darken($white,10%)
+	.row
+		margin: 0px -5px
+	.col-xs-12
+		padding: 0px 5px
+	.filter
+		margin-bottom: 10px
+	select 
+		width: 100%
+		padding: 10px 15px
+		border: 1px solid darken($white,40%)
+
+.productlist
+	padding: 20px 10px 10px
+	.col-xs-12
+		margin-bottom: 30px
+	.productcol
+		background: darken($white,8%)
+		height: 100%
+		border: 1px solid transparent
+		+transition(all,0.5s)
+		&:hover
+			border: 1px solid darken($white,40%)
+			box-shadow: 5px 5px 5px color-rgba($black,0.2)
+			figure 
+				figcaption
+					.productdetail
+						border-color: darken($white,40%)
+		figure 
+			.productimg
+				display: block
+				img 
+					width: 100%
+			figcaption
+				padding: 20px
+				.productname
+					+fs(16rem)
+					font-weight: 700
+					line-height: 1.5
+					text-transform: uppercase
+					a 
+						color: $green
+				.productdes
+					+fs(14rem)
+					margin-bottom: 20px
+				.price
+					color: darken($yellow,30%)
+				.productdetail
+					border-top: 1px solid darken($white,20%)
+					line-height: 40px
+					margin: 0px -20px -20px
+					padding: 0px 20px
+					+fs(12rem)
+					color: darken($white,60%)
+					+transition(all,0.5s)
+					.fa 
+						+fs(16rem)
+						margin-right: 5px
+					.dientich
+						float: left
+					.phongtam
+						float: right
+						margin-left: 10px
+						.fa-bath
+							&:before
+								content: ''
+								background: url(../img/bathicon.png) center center no-repeat
+								background-size: contain
+								display: block
+								width: 16px
+								height: 16px
+								+transform(translateY(2px))
+								opacity: 0.7
+					.phongngu
+						float: right
+
+.fa-bath
+	&:before
+		content: ''
+		background: url(../img/bathicon.png) center center no-repeat
+		background-size: contain
+		display: block
+		width: 16px
+		height: 16px
+		+transform(translateY(2px))
+.product-detail
+	padding: 10px
+.canho-name
+	+fs(30rem)
+	color: $main
+	margin-bottom: 10px
+	font-weight: 700
+.canho-price
+	+fs(14rem)
+	margin-bottom: 20px
+	.price
+		+fs(22rem)
+		font-weight: 700
+		color: darken($yellow,35%)
+		margin-left: 5px
+.canho-detail
+	.row
+		margin: 0px -5px
+	.col-xs-12
+		padding: 0px 5px
+	.detailcol
+		background: darken($white,8%)
+		text-align: center
+		line-height: 36px
+		margin-bottom: 10px
+		.fa-bath
+
+.canho-picture
+	.canho-slide
+		margin-bottom: 10px
+		.item
+		.canho-img
+			display: block
+			+pos(rel,null)
+			&:before
+				content: '\f00e'
+				font-family: 'fontawesome'
+				width: 30px
+				height: 30px
+				line-height: 30px
+				text-align: center
+				color: $white
+				background: $green
+				+pos(abs, null 0 0 null)
+				opacity: 0
+				+transition(all,0.5s)
+			&:hover
+				&:before
+					opacity: 1
+	.canho-nav
+		// margin: 0px -5px
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 5
+			background: $green
+			color: $white
+			+fs(0rem)
+			width: 30px
+			height: 30px
+			line-height: 30px
+			&:before
+				content: ''
+				font-family: 'fontawesome'
+				+fs(24rem)
+			&:hover
+				background: lighten($green,10%)
+		.slick-prev
+			left: 0
+			&:before
+				content: '\f104'
+		.slick-next
+			right: 0
+			&:before
+				content: '\f105'
+
+		.item
+			padding: 0px 5px
+			.canho-img
+				+pos(rel,null)
+				cursor: pointer
+				display: block
+				&:before
+					content: ''
+					+pos(abs, 0 null 0 0)
+					right: 0
+					background: color-rgba(darken($yellow,0%),0.6)
+					opacity: 0
+					+transition(all,0.5s)
+				&:hover
+					filter: grayscale(100%)
+			&.slick-current
+				.canho-img
+					&:before
+						opacity: 1
+
+.canho-description
+	background: darken($white,8%)
+	height: 100%
+	.title
+		line-height: 36px
+		+fs(16rem)
+		text-transform: uppercase
+		background: $brown
+		padding: 0px 15px
+		color: $white
+		font-weight: 600
+	.detail
+		padding: 15px
+		ul 
+			li 
+				+flexbox
+				+fs(14rem)
+				line-height: 1.5
+				margin-bottom: 10px
+				.label, .value
+					width: 50%
+	.btn-download
+		display: inline-block
+		width: 220px
+		background: #c2a257
+		color: $white
+		padding: 5px 20px 5px 60px
+		// text-align: center
+		text-align: left
+		+fs(14rem)
+		+pos(rel,null)
+		&:before
+			content: '\f019'
+			font-family: 'fontawesome'
+			+fs(24rem)
+			color: $white
+			+pos(abs, 10px null null 20px)
+		&:hover
+			background: lighten(#c2a257,10%)
+.canho-title
+	+fs(20rem)
+	background: darken($white,4%)
+	padding: 9px 10px
+	border-left: 3px solid $green
+	text-transform: uppercase
+	color: $green
+	margin-bottom: 30px
+.tienich
+	margin: 40px 0
+	.tienich-list
+		padding: 0px 15px
+		.fa 
+			color: $brown
+			margin-right: 5px
+		ul 
+			li 
+				margin-bottom: 10px
+				&:last-child
+					margin-bottom: 0
+
+.bando
+	margin-bottom: 40px
+	.bando-wrap
+		+pos(rel,null)
+		border: 1px solid darken($white,20%)
+	.bando-filter
+		+pos(abs,0 0 0 null)
+		width: 33.33%
+		background: $white
+		border-left: 1px solid darken($white,20%)
+		.filter
+			padding: 20px
+			select 
+				+bor-rad(5px)
+				border: 1px solid darken($white,15%)
+				padding: 10px 15px
+				width: 100%
+		.point-list
+			max-height: calc( 400px - 80px)
+			overflow: auto
+			// padding: 0px 10px
+			&::-webkit-scrollbar-track
+				background-color: darken($white,10%)
+			&::-webkit-scrollbar
+				width: 5px
+				background-color: darken($white,60%)
+			&::-webkit-scrollbar-thumb
+				background-color: $brown
+			ul 
+				border-top: 1px dashed lighten($brown,30%)
+				// padding: 0px 10px
+				li
+					border-bottom: 1px dashed lighten($brown,30%)
+					padding: 5px 20px
+					.name
+						+fs(15rem)
+						color: darken($white,60%)
+					.des
+						+fs(15rem)
+						color: darken($yellow,30%)
+					&:hover, &.active
+						background: darken($white,5%)
+#ctl00_mainContent_ctl01_pnlQuestions
+	padding: 15px 5px
+	&:after
+		content: ''
+		display: table
+		width: 100%
+		clear: both
+.canho-form
+	background: darken($white,4%)
+	margin-bottom: 30px
+	.canho-title
+		// margin-bottom: 15px
+		margin: 0
+	.form-wrap
+		padding: 0px
+		.form-group
+			padding: 0px 10px
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+			.fa.fa-exclamation-triangle
+				top: 32px
+			label
+				+fs(14rem)
+				color: darken($white,60%)
+				width: 100%
+			input, textarea
+				background: none 
+				width: 100%
+				+fs(14rem)
+				+bor-rad(5px)
+				border: 1px solid darken($white,20%)
+				padding: 8px 15px
+		input[type="reset"]
+			display: none
+		.frm-btn
+			padding: 0px 5px 20px
+			+pos(rel,null)
+			&:before
+				content: '\f1d9'
+				font-family: 'fontawesome'
+				color: $white
+				+pos(abs, 7px null null 25px)
+		.frm-btnwrap
+			label
+				display: none
+		input[type="submit"]
+			display: inline-block
+			width: auto
+			+bor-rad(3px)
+			background: $brown
+			color: $white
+			padding: 10px 20px 10px 40px
+			text-transform: uppercase
+			border: none
+			&:hover
+				background: darken($brown,10%)

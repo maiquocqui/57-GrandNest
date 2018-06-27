@@ -1,0 +1,64 @@
+.history-wrap
+	+pos(rel,null)
+	&:before
+		content: ''
+		display: block
+		width: 1px
+		background: color-rgba($black,0.1)
+		+pos(abs, 0 null 0 10px)
+	.milestone
+		margin-bottom: 20px
+		padding-left: 30px
+		.year
+			background: $green
+			color: $yellow
+			font-weight: 700
+			+bor-rad(3px)
+			line-height: 24px
+			padding: 0px 10px
+			display: inline-block
+			+pos(rel,null)
+			margin-bottom: 10px
+			&:before
+				content: ''
+				display: block
+				width: 0
+				height: 0
+				border: 7px solid
+				border-color: transparent  $green transparent transparent
+				+pos(abs,50% null null -7px)
+				+transform(translate(-50%, -50%))
+			&:after
+				content: ''
+				display: block
+				width: 12px
+				height: 12px
+				+bor-rad(50%)
+				background: $green
+				+pos(abs, 50% null null -26px)
+				+transform(translateY(-50%))
+		.event
+			background: $white
+			color: $black
+			+bor-rad(5px)
+			padding: 10px
+
+.certlist
+	.certcol
+		figure 
+			.certimg
+				height: 200px
+				+flexbox
+				justify-content: center
+				align-items: center
+				border: 1px solid darken($white,15%)
+				background: $white
+				img 
+					max-width: 90%
+					max-height: 90%
+			figcaption
+				padding: 10px 0
+				.certname
+					+fs(14rem)
+					font-weight: 600
+					color: $black
